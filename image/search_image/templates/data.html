@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block title %}
+Data
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+{% block data %}
+
+{% if name %}
+    <div class="row">
+        <div class="col-2">
+            
+        </div>
+        <div class="col-8">
+            <h3 style="text-align:center;">
+                <a class="btn" href="{% url 'home' %}" role="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left fa-2x" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg> 
+                  </a>
+                The famous in picture is 
+                {{d}}
+                and founding
+                {% for item in l %}
+                        {% if forloop.last %}
+                            {{ forloop.counter }} 
+                        {% endif %}
+                {% endfor %}
+                videos related the famous in the picture
+                
+            </h3>
+        </div>
+        <div class="col-2"></div>
+        
+    </div>
+  
+    <br>
+        {% if l %}
+            {% if video %}
+                {% for item in l %}
+                        {% for k in video %}
+                            {% for j in k %}
+                                {% if item.video == j.video.url %}
+                                    <br><br>
+                                    <div class="row" >
+                                        <div class="col-2"></div>
+                                        <div class="col-8">
+                                            <div class="card">
+                                                <a href="{% url 'detail-video-search' j.id primary %}" ><img style="width:100%" src="/media/{{j.represent}}" /> </a>
+                                                
+                                                <!-- <video class="" controls="controls">
+                                                    <source src="{{item.video}}" type="video/mp4"/>
+                                                </video> -->
+                                                
+                                                <div class="card-body">
+                                                <h5 class="card-title">{{j.title}}</h5>
+                                                <p class="card-text">{{j.description|slice:":200"|safe}}...<a href="#"><strong> . . .</strong></a></p>
+                                                <a href="#" class="btn btn-primary">Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2"></div>
+                                        
+                                    </div>
+                                    <br>
+                                    <br>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    <br>
+                    <br>
+                {% endfor %}
+            {% else %}
+                <div class="row">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-8">
+                    <h3 style="text-align:center;"><a class="btn" href="{% url 'home' %}" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                        </svg> 
+                    </a> Sorry we couldn't find any celebrity videos in the picture.</h3>
+                    </div>
+                </div>
+            {% endif %}
+        {% else %}
+            <div class="row">
+                <div class="col-2">
+                </div>
+                <div class="col-8">
+                <h3 style="text-align:center;"><a class="btn" href="{% url 'home' %}" role="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg> 
+                </a> Sorry we couldn't find any celebrity videos in the picture.</h3>
+                </div>
+            </div>
+        {% endif %}
+{% else %}  
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8">
+        <h3 style="text-align:center;"><a class="btn" href="{% url 'home' %}" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg> 
+        </a> Sorry we couldn't find any celebrity videos in the picture.</h3>
+        </div>
+    </div>
+{% endif %}
+{% endblock %}

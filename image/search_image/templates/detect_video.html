@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}
+Add Video
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <!-- {{result.0}} -->
+    <!-- {{video_db.id}} -->
+    <br>
+    {% if result1 %}
+    <div class="row">
+        <h3 style="text-align: center;">Found 
+            
+            {{result1}}
+            <!-- {% for i in  result %}
+              {{i}}
+            {% endfor %}  -->
+            in this video after detect. Please choose add label to this video
+        </h3>
+    </div>
+    <form action="{% url 'add-label' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if object_list %}
+            <input type="hidden" name = "primary_key"  value="{{video_db.id}}">
+            {% for i in result %}
+                <input type="hidden" name = "1" value="{{i}}">
+            {% endfor %}
+            <p>
+                    <select id="multiselect" class="form-control" name="select1" multiple="multiple" style="height: 260px">
+                        {% for item in object_list %}
+                            <option value="{{ item }}">{{item}}</option>
+                        {% endfor %}    
+                    </select>    
+            </p>
+        {% endif %}
+        
+        <button class="btn btn-primary btn-sm">Add label</button>
+        
+    </form>
+    {% else %}  
+
+    <div class="row">
+        <h3 style="text-align: center;">
+
+            Can not detect any celebrity in this video. Please detect again.
+        </h3>
+    </div>
+    {% endif %}
+    
+    
+    
+
+{% else %}
+You are not allow here!
+
+{% endif %}
+{% endblock %}
+

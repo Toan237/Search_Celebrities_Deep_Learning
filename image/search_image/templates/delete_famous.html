@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}
+Delete famous
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col" style="background-color: white; border-radius: 25px; text-align:center;">
+                <div class="form-group">
+                    <form method="post">
+                        {% csrf_token %}
+                        <br>
+                        <h3>
+                            <a class="btn" href="{% url 'list-famous' %}" role="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left fa-2x" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                </svg> 
+                                </a>
+                            Are you sure to delete this?
+                            <br> 
+                            <button class="btn btn-primary btn-sm">Delete</button></h3>
+                </div>
+                <br>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    
+
+
+{% else %}
+You are not allow here!
+
+{% endif %}
+{% endblock %}

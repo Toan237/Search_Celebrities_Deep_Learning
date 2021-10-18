@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}
+List famous
+{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="row" >
+    <div class="col">
+        
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="col-2"><a class="btn" href="{% url 'home' %}" role="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left fa-2x" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg> 
+        </a>
+          
+        </div>
+        <div class="col-8"><h3 style="margin-left: 80px;" ><b>List famous</b></h3></div>
+      </div>
+      
+        
+        {% if object_list %}
+            <table class="table table-bordered" style="background-color: white;">
+              <thead>
+                <tr>
+                  <th scope="col">Serial</th>
+                  <th scope="col">Name Famous</th>
+                  <th scope="col" class="text-center">Action</th>
+                </tr>
+              </thead>
+              {% for i in object_list %}
+              
+              <tbody>
+                <tr>
+                  <th scope="row">{{ forloop.counter }}</th>
+                  <td><b>{{i.name}}</b></td>
+                  <td class="text-center">
+                  {% for j in new_data %}
+                    {% if j == i.name %}
+                    <a class="btn btn-danger btn-sm"  href="{% url 'delete-famous' i.pk %}" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                      <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                      <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                    </svg></a>
+                    {% endif %}
+                  {% endfor %}
+                  
+                </td>
+                </tr>
+              </tbody>
+              {% endfor %}
+            </table>
+            
+        {% else %}
+          <div class="row">
+            <div class="col-2">
+              
+            </div>
+            <div class="col-8">
+              
+              <h3 style="text-align:center;"><a class="btn" href="{% url 'home' %}" role="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                </svg> 
+              </a> There is no video list in the database. Please add.</h3>
+            </div>
+          </div>
+        {% endif %}
+    </div>
+    <div class="col">
+    </div>
+  </div>
+   
+{% else %}
+You are not allow here!
+
+{% endif %}
+{% endblock %}

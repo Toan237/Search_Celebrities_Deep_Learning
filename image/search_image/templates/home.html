@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+{% block title %}
+Search Image
+{% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    height: 100vh;
+    }
+    #login .container #login-row #login-column #login-box {
+    margin-top: 70px;
+    width: 100%px;
+    height: 100%px;
+    background-color: #ffffff;
+    }
+    #login .container #login-row #login-column #login-box #login-form {
+    padding: 10px;
+    }
+    #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -65px;
+    }
+    label {
+        margin-bottom:8px;
+    }
+    h3{
+        margin-top: 20px;
+    }
+    form {
+        margin-top: -50px;
+        text-align: center;
+    }
+    label{
+        display: none;
+    }
+</style>
+<div class="row" style="height:450px; ">
+    <div class="col-3" ></div>
+    <div class="col-6 " style="background-color: white; border-radius: 30px;">
+        <div id="login">
+            <div class="container">
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-10">
+                        <h3 class="text-center">Search Video of Famous</h3>
+                        <div id="login-box" class="col-md-12">
+                            <form action="{% url 'getFile' %}" method="POST" enctype="multipart/form-data" name="image">
+                                {% csrf_token %}
+                                <br>
+                                <p style="width:90%; margin-left: 30px; ">
+                                    {% csrf_token %}
+                                    {{UF}}
+                                </p>
+                                <br>
+                                <div class="row justify-content-md-center">
+                                    <div class="image-preview" id="imagePreview">
+                                        <img src="" alt="Image preview" class="image-preview__image">
+                                        <span class="image-preview__default-text">Image Preview</span>
+                                    </div>
+                                </div>
+                                <br>
+                                <input type="hidden" class="btn btn-primary btn-sm" name="inpFile" id="search" value="Search" >
+                            </form>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3" ></div>
+  </div>
+
+
+<script>
+    const inpFile = document.getElementById("id_image");
+    const previewContainer = document.getElementById("imagePreview");
+    const previewImage = previewContainer.querySelector(".image-preview__image");
+    const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
+    const search = document.getElementById("search");
+    inpFile.addEventListener("change",function(){
+        const file = this.files[0];
+        if (file){
+            const reader = new FileReader();
+            previewDefaultText.style.display = "none";
+            previewImage.style.display = "block";
+
+            reader.addEventListener("load", function(){
+                // console.log(this)
+                previewImage.setAttribute("src", this.result);
+            })
+            search.setAttribute("type","submit")
+            reader.readAsDataURL(file);
+
+        }
+        else
+        {
+            previewDefaultText.style.display = null;
+            previewImage.style.display = null;
+            previewImage.setAttribute("src","");
+        }
+    });
+</script>
+
+
+{% endblock %}
+
+{% block data %}
+{% endblock %}
+{% block video %}
+<style>
+ 
+  </style>
+<div class="row" style="border-bottom: 1px solid rgba(255, 255, 255, 0.863);">
+  <h3>Most searched videos</h3></div>
+<br>
+<div class="row" >
+    {% if value %}
+        {% for i in value %}
+            
+            <div class="col-3" >
+                <div class="card" style="height: 100%">
+                <a href="{% url 'detail-video' i.id %}"><img style="width: 100%;" src="/media/{{i.represent}}" /> </a> 
+                
+                <div class="card-body" style="height: 100%">
+                    <h5 class="card-title">{{i.title|slice:":30"|safe}}...</h5>
+                    <div class="row" style="height: 70%">
+                        <p class="card-text" style="height: -10%" >{{i.description|slice:":200"|safe}}...</p>
+                    </div>
+                    <a href="{% url 'detail-video' i.id %}" class="btn btn-primary" >View</a>
+                </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% if value1 %}
+        {% for i in value1 %}
+            
+            <div class="col-3" >
+                <div class="card" style="height: 100%">
+                <a href="{% url 'detail-video' i.id %}"><img style="width: 100%;" src="/media/{{i.represent}}" /> </a> 
+                
+                <div class="card-body" style="height: 100%">
+                    <h5 class="card-title">{{i.title|slice:":30"|safe}}...</h5>
+                    <div class="row" style="height: 70%">
+                        <p class="card-text" style="height: -10%" >{{i.description|slice:":200"|safe}}...</p>
+                    </div>
+                    <a href="{% url 'detail-video' i.id %}" class="btn btn-primary" >View</a>
+                </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+ 
+</div>
+<br>
+<br>
+<!-- <div class="row">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+</div> -->
+{% endblock %}
+
+{% block footer %}
+
+<style>
+    .footer-bs {
+    border-top: 1px solid white;
+	padding: 60px 40px;
+	color: rgba(255,255,255,1.00);
+	margin-bottom: 20px;
+	border-bottom-right-radius: 6px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 6px;
+}
+.footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
+.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
+.footer-bs .footer-brand h2 { margin:0px 0px 10px; }
+.footer-bs .footer-brand p { font-size:12px; color:rgba(255,255,255,0.70); }
+
+.footer-bs .footer-nav ul.pages { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.pages li { padding:5px 0px;}
+.footer-bs .footer-nav ul.pages a { color:rgba(255,255,255,1.00); font-weight:bold; text-transform:uppercase; }
+.footer-bs .footer-nav ul.pages a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+.footer-bs .footer-nav h4 {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+}
+
+.footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.list li { padding:5px 0px;}
+.footer-bs .footer-nav ul.list a { color:rgba(255,255,255,0.80); }
+.footer-bs .footer-nav ul.list a:hover { color:rgba(255,255,255,0.60); text-decoration:none; }
+
+.footer-bs .footer-social ul { list-style:none; padding:0px; }
+.footer-bs .footer-social h4 {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+.footer-bs .footer-social li { padding:5px 4px;}
+.footer-bs .footer-social a { color:rgba(255,255,255,1.00);}
+.footer-bs .footer-social a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+
+.footer-bs .footer-ns h4 {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+}
+.footer-bs .footer-ns p { font-size:12px; color:rgba(255,255,255,0.70); }
+
+@media (min-width: 768px) {
+	.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
+}
+</style>
+
+<div class="">
+    <section style="height:80px;"></section>
+	
+    <!----------- Footer ------------>
+    <footer class="footer-bs">
+        <div class="row">
+        	<div class="col-md-3 footer-brand animated fadeInLeft">
+            	<h2>Can Tho University</h2>
+                <p>Section II, 3/2 Street, Xuan Khanh Ward, Ninh Kieu District, Can Tho City</p>
+                <p></p>
+            </div>
+        	<div class="col-md-2 footer-nav animated fadeInUp">
+            	<h4>Major —</h4>
+                <ul class="pages">
+                    <li><a href="#">Information Technology</a></li>
+                </ul>
+            	<div class="col-md-6">
+                    
+                </div>
+            	<div class="col-md-6">
+                    <ul class="list">
+                       
+                    </ul>
+                </div>
+            </div>
+        	<div class="col-md-4 footer-social animated fadeInDown">
+            	<h4>Follow Me</h4>
+            	<ul>
+                	<li><a href="#">Gmail: toanb1704699@student.ctu.edu.vn</a></li>
+                </ul>
+            </div>
+        	<div class="col-md-3 footer-ns animated fadeInRight">
+            	<h4>Thesis</h4>
+                <p>Graduation thesis for student Pham Quoc Toan</p>
+                <p>
+                 </p>
+            </div>
+        </div>
+    </footer>
+    
+
+</div>
+{% endblock %}

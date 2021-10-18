@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}
+List video
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+{{f}}
+<div class="row">
+    <div class="col">
+      
+    </div>
+    <div class="col">
+        <div class="row">
+            <div class="col-2"><a class="btn" href="{% url 'home' %}" role="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+              </svg> 
+            </a>
+              
+            </div>
+            <div class="col-8"><h3 style="margin-left: 90px;" ><b>List video</b></h3></div>
+          </div>
+        <!-- <h1 style="margin-left: 90px;">List video</h1> -->
+        {% if object_list %}
+                <table class="table table-bordered" style="background-color: white;">
+                    <thead >
+                    <tr>
+                        <th scope="col">Sr.</th>
+                        <th scope="col" >Name Famous</th>
+                        
+                    </tr>
+                    
+                    </thead>
+                    {% for post in object_list %}
+                    
+                    <tbody>
+                    <tr >
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td ><a href="{% url 'list-name-video' post.name|slugify|title %}" >{{post.name}}</a></td>
+                        
+                    </tr>
+                    </tbody>
+                    {% endfor %}
+                </table>
+        {% else %}
+            <div class="row">
+                <div class="col-2">
+                
+                </div>
+                <div class="col-8">
+                
+                <h3 style="text-align:center;"><a class="btn" href="{% url 'home' %}" role="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg> 
+                </a> There is no video list in the database. Please add.</h3>
+                </div>
+            </div>
+    
+        {% endif %}
+        
+    </div>
+    <div class="col">
+      
+    </div>
+</div>
+   
+{% else %}
+You are not allow here!
+
+{% endif %}
+{% endblock %}
+

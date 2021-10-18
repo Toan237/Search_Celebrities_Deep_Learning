@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  {% load staticfiles %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'css/msfmultiselect.css' %}" type="text/css" />
+  <script src="{% static 'js/msfmultiselect.js' %}"></script>
+  <!-- Bootstrap CSS -->
+
+
+  <title>{% block title %}{% endblock %}</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      /* background-color: #f5f5f5; */
+    }
+
+    .image-preview {
+      width: 270px;
+      min-height: 200px;
+      border: 2px solid #dddddd;
+      margin-top: auto;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #cccccc
+    }
+
+    .image-preview__image {
+      display: none;
+      width: 302px;
+      height: 200px;
+    }
+
+    .bg,
+    .bg-filter {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    .bg-filter {
+      z-index: -99;
+      opacity: 0.4;
+      /* background: -webkit-linear-gradient(rgba(49, 224, 247, 1) 0%, rgba(90, 77, 184, 1) 100%);
+        background: -moz-linear-gradient(rgba(49, 224, 247, 1) 0%, rgba(90, 77, 184, 1) 100%);
+        background: -o-linear-gradient(rgba(49, 224, 247, 1) 0%, rgba(90, 77, 184, 1) 100%);
+        background: linear-gradient(rgba(49, 224, 247, 1) 0%, rgba(90, 77, 184, 1) 100%); */
+
+      background: -webkit-linear-gradient(rgb(20, 136, 151) 0%, rgb(53, 41, 143) 100%);
+      background: -moz-linear-gradient(rgb(25, 162, 180) 0%, rgb(58, 44, 160) 100%);
+      background: -o-linear-gradient(rgb(24, 179, 199) 0%, rgb(37, 24, 134) 100%);
+      background: linear-gradient(rgb(21, 130, 145) 0%, rgb(47, 32, 160) 100%);
+    }
+
+    .intro-text {
+      font-family: "Open Sans";
+      width: 50%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      font-size: 56px;
+      text-transform: uppercase;
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-radius: 25px; margin-top:20px;">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-link active" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Famous
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{% url 'list-famous' %}">List famous</a></li>
+                <li><a class="dropdown-item" href="{% url 'add-famous' %}">Add famous</a></li>
+
+
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-link active" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Video
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{% url 'list-famous-video' %}">List video</a></li>
+                <li><a class="dropdown-item" href="{% url 'add-video' %}">Add video</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'logout' %}">Logout</a>
+            </li>
+
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'login' %}">Login</a>
+            </li>
+            {% endif %}
+          </ul>
+
+        </div>
+
+      </div>
+      {% if user.is_authenticated %}
+      <!-- <div class="row" style="margin-right: 20px;">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div> -->
+      {% endif %}
+    </nav>
+    <div class="bg-filter">
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <br>
+    {% block content %}{% endblock %}
+    <br>
+  </div>
+
+  <div class="container">
+    {% block data %}{% endblock %}
+  </div>
+  <br>
+  <div class="container">
+
+    {% block video %}{% endblock %}
+  </div>
+  <div class="container">
+
+    {% block footer %}{% endblock %}
+  </div>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

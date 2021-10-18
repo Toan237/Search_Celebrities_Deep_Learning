@@ -1,0 +1,612 @@
+{
+    "1": {
+        "label_face": "Phan Dinh Tung",
+        "sum_face": 11,
+        "video": "/media/video/PDT-1.mp4",
+        "Phan Dinh Tung": 11
+    },
+    "3": {
+        "label_face": "Phan Dinh Tung",
+        "sum_face": 13,
+        "video": "/media/video/PDT-3.mp4",
+        "Phan Dinh Tung": 13
+    },
+    "4": {
+        "label_face": "Phan Dinh Tung",
+        "sum_face": 14,
+        "video": "/media/video/PDT-4.mp4",
+        "Phan Dinh Tung": 14
+    },
+    "5": {
+        "label_face": "Phan Dinh Tung",
+        "sum_face": 15,
+        "video": "/media/video/PDT-2.mp4",
+        "Phan Dinh Tung": 15
+    },
+    "6": {
+        "label_face": "Phan Dinh Tung-Truong Giang",
+        "sum_face": 25,
+        "video": "/media/video/PDT-5.mp4",
+        "Truong Giang": 5,
+        "Phan Dinh Tung": 20
+    },
+    "7": {
+        "label_face": "Phan Dinh Tung",
+        "sum_face": 20,
+        "video": "/media/video/PDT-6.mp4",
+        "Phan Dinh Tung": 20
+    },
+    "8": {
+        "label_face": "Phan Dinh Tung",
+        "sum_face": 25,
+        "video": "/media/video/PDT-7.mp4",
+        "Phan Dinh Tung": 25
+    },
+    "9": {
+        "label_face": "Phan Dinh Tung",
+        "sum_face": 31,
+        "video": "/media/video/PDT-8.mp4",
+        "Phan Dinh Tung": 31
+    },
+    "10": {
+        "label_face": "Phan Dinh Tung",
+        "sum_face": 13,
+        "video": "/media/video/PDT-9.mp4",
+        "Phan Dinh Tung": 13
+    },
+    "11": {
+        "label_face": "Nhat Kim Anh",
+        "sum_face": 2,
+        "video": "/media/video/NKA-10.mp4",
+        "Nhat Kim Anh": 2
+    },
+    "12": {
+        "label_face": "Nhat Kim Anh",
+        "sum_face": 12,
+        "video": "/media/video/NKA-1.mp4",
+        "Nhat Kim Anh": 12
+    },
+    "13": {
+        "label_face": "Nhat Kim Anh",
+        "sum_face": 36,
+        "video": "/media/video/NKA-2.mp4",
+        "Nhat Kim Anh": 36
+    },
+    "14": {
+        "label_face": "Nhat Kim Anh",
+        "sum_face": 41,
+        "video": "/media/video/NKA-3.mp4",
+        "Nhat Kim Anh": 41
+    },
+    "16": {
+        "label_face": "Nhat Kim Anh",
+        "sum_face": 71,
+        "video": "/media/video/NKA-5.mp4",
+        "Nhat Kim Anh": 71
+    },
+    "17": {
+        "label_face": "Nhat Kim Anh",
+        "sum_face": 75,
+        "video": "/media/video/NKA-6.mp4",
+        "Nhat Kim Anh": 75
+    },
+    "18": {
+        "label_face": "Nhat Kim Anh",
+        "sum_face": 75,
+        "video": "/media/video/NKA-7.mp4",
+        "Nhat Kim Anh": 75
+    },
+    "22": {
+        "label_face": "Nhat Kim Anh",
+        "sum_face": 3,
+        "video": "/media/video/NKA-9.mp4",
+        "Nhat Kim Anh": 3
+    },
+    "23": {
+        "label_face": "Ho Quang Hieu-Nhat Kim Anh",
+        "sum_face": 15,
+        "video": "/media/video/NKA-8.mp4",
+        "Ho Quang Hieu": 8,
+        "Nhat Kim Anh": 7
+    },
+    "24": {
+        "label_face": "Nhat Kim Anh",
+        "sum_face": 6,
+        "video": "/media/video/NKA-4.mp4",
+        "Nhat Kim Anh": 6
+    },
+    "25": {
+        "label_face": "Phan Dinh Tung",
+        "sum_face": 32,
+        "video": "/media/video/PDT-10.mp4",
+        "Phan Dinh Tung": 32
+    },
+    "26": {
+        "label_face": "Quyen Linh",
+        "sum_face": 24,
+        "video": "/media/video/QL-1.mp4",
+        "Quyen Linh": 24
+    },
+    "27": {
+        "label_face": "Quyen Linh",
+        "sum_face": 28,
+        "video": "/media/video/QL-2.mp4",
+        "Quyen Linh": 28
+    },
+    "28": {
+        "label_face": "Quyen Linh",
+        "sum_face": 27,
+        "video": "/media/video/QL-3.mp4",
+        "Quyen Linh": 27
+    },
+    "29": {
+        "label_face": "Quyen Linh",
+        "sum_face": 9,
+        "video": "/media/video/QL-4.mp4",
+        "Quyen Linh": 9
+    },
+    "30": {
+        "label_face": "Quyen Linh",
+        "sum_face": 10,
+        "video": "/media/video/QL-5.mp4",
+        "Quyen Linh": 10
+    },
+    "31": {
+        "label_face": "Quyen Linh",
+        "sum_face": 17,
+        "video": "/media/video/QL-6.mp4",
+        "Quyen Linh": 17
+    },
+    "32": {
+        "label_face": "Quyen Linh",
+        "sum_face": 49,
+        "video": "/media/video/QL-7.mp4",
+        "Quyen Linh": 49
+    },
+    "33": {
+        "label_face": "Quyen Linh",
+        "sum_face": 50,
+        "video": "/media/video/QL-8.mp4",
+        "Quyen Linh": 50
+    },
+    "34": {
+        "label_face": "Quyen Linh",
+        "sum_face": 36,
+        "video": "/media/video/QL-9.mp4",
+        "Quyen Linh": 36
+    },
+    "35": {
+        "label_face": "Quyen Linh",
+        "sum_face": 17,
+        "video": "/media/video/QL-10.mp4",
+        "Quyen Linh": 17
+    },
+    "36": {
+        "label_face": "Truong Giang",
+        "sum_face": 7,
+        "video": "/media/video/TG-10.mp4",
+        "Truong Giang": 7
+    },
+    "37": {
+        "label_face": "Truong Giang",
+        "sum_face": 7,
+        "video": "/media/video/TG-9.mp4",
+        "Truong Giang": 7
+    },
+    "38": {
+        "label_face": "Truong Giang",
+        "sum_face": 7,
+        "video": "/media/video/TG-8.mp4",
+        "Truong Giang": 7
+    },
+    "39": {
+        "label_face": "Truong Giang",
+        "sum_face": 20,
+        "video": "/media/video/TG-7.mp4",
+        "Truong Giang": 20
+    },
+    "40": {
+        "label_face": "Tran Thanh-Truong Giang",
+        "sum_face": 18,
+        "video": "/media/video/TG-6.mp4",
+        "Tran Thanh": 12,
+        "Truong Giang": 6
+    },
+    "41": {
+        "label_face": "Tran Thanh-Truong Giang",
+        "sum_face": 9,
+        "video": "/media/video/TG-5.mp4",
+        "Tran Thanh": 4,
+        "Truong Giang": 5
+    },
+    "42": {
+        "label_face": "Truong Giang",
+        "sum_face": 26,
+        "video": "/media/video/TG-4.mp4",
+        "Truong Giang": 26
+    },
+    "43": {
+        "label_face": "Truong Giang",
+        "sum_face": 34,
+        "video": "/media/video/TG-3.mp4",
+        "Truong Giang": 34
+    },
+    "44": {
+        "label_face": "Truong Giang",
+        "sum_face": 33,
+        "video": "/media/video/TG-2.mp4",
+        "Truong Giang": 33
+    },
+    "45": {
+        "label_face": "Truong Giang",
+        "sum_face": 36,
+        "video": "/media/video/TG-1.mp4",
+        "Truong Giang": 36
+    },
+    "46": {
+        "label_face": "Dan Truong",
+        "sum_face": 30,
+        "video": "/media/video/DT-1.mp4",
+        "Dan Truong": 30
+    },
+    "47": {
+        "label_face": "Dan Truong",
+        "sum_face": 3,
+        "video": "/media/video/DT-2.mp4",
+        "Dan Truong": 3
+    },
+    "48": {
+        "label_face": "Dan Truong",
+        "sum_face": 8,
+        "video": "/media/video/DT-3.mp4",
+        "Dan Truong": 8
+    },
+    "49": {
+        "label_face": "Dan Truong",
+        "sum_face": 26,
+        "video": "/media/video/DT-4.mp4",
+        "Dan Truong": 26
+    },
+    "50": {
+        "label_face": "Dan Truong",
+        "sum_face": 43,
+        "video": "/media/video/DT-5.mp4",
+        "Dan Truong": 43
+    },
+    "51": {
+        "label_face": "Dan Truong",
+        "sum_face": 17,
+        "video": "/media/video/DT-6.mp4",
+        "Dan Truong": 17
+    },
+    "52": {
+        "label_face": "Dan Truong",
+        "sum_face": 9,
+        "video": "/media/video/DT-7.mp4",
+        "Dan Truong": 9
+    },
+    "53": {
+        "label_face": "Dan Truong",
+        "sum_face": 20,
+        "video": "/media/video/DT-8.mp4",
+        "Dan Truong": 20
+    },
+    "54": {
+        "label_face": "Dan Truong",
+        "sum_face": 4,
+        "video": "/media/video/DT-9.mp4",
+        "Dan Truong": 4
+    },
+    "55": {
+        "label_face": "Dan Truong",
+        "sum_face": 16,
+        "video": "/media/video/DT-10.mp4",
+        "Dan Truong": 16
+    },
+    "56": {
+        "label_face": "Khac Viet",
+        "sum_face": 41,
+        "video": "/media/video/KV-1.mp4",
+        "Nguyen Khac Viet": 41
+    },
+    "57": {
+        "label_face": "Khac Viet",
+        "sum_face": 11,
+        "video": "/media/video/KV-2.mp4",
+        "Nguyen Khac Viet": 11
+    },
+    "58": {
+        "label_face": "Khac Viet",
+        "sum_face": 10,
+        "video": "/media/video/KV-3.mp4",
+        "Nguyen Khac Viet": 10
+    },
+    "59": {
+        "label_face": "Khac Viet",
+        "sum_face": 9,
+        "video": "/media/video/KV-4.mp4",
+        "Nguyen Khac Viet": 9
+    },
+    "60": {
+        "label_face": "Khac Viet",
+        "sum_face": 8,
+        "video": "/media/video/KV-5.mp4",
+        "Nguyen Khac Viet": 8
+    },
+    "61": {
+        "label_face": "Khac Viet",
+        "sum_face": 2,
+        "video": "/media/video/KV-6.mp4",
+        "Nguyen Khac Viet": 2
+    },
+    "62": {
+        "label_face": "Khac Viet",
+        "sum_face": 11,
+        "video": "/media/video/KV-7.mp4",
+        "Nguyen Khac Viet": 11
+    },
+    "63": {
+        "label_face": "Khac Viet",
+        "sum_face": 27,
+        "video": "/media/video/KV-8.mp4",
+        "Nguyen Khac Viet": 27
+    },
+    "64": {
+        "label_face": "Khac Viet",
+        "sum_face": 20,
+        "video": "/media/video/KV-9.mp4",
+        "Nguyen Khac Viet": 20
+    },
+    "65": {
+        "label_face": "Khac Viet",
+        "sum_face": 1,
+        "video": "/media/video/KV-10.mp4",
+        "Nguyen Khac Viet": 1
+    },
+    "66": {
+        "label_face": "Tran Thanh",
+        "sum_face": 34,
+        "video": "/media/video/TT-1.mp4",
+        "Tran Thanh": 34
+    },
+    "67": {
+        "label_face": "Tran Thanh",
+        "sum_face": 38,
+        "video": "/media/video/TT-2.mp4",
+        "Tran Thanh": 38
+    },
+    "68": {
+        "label_face": "Tran Thanh",
+        "sum_face": 46,
+        "video": "/media/video/TT-3.mp4",
+        "Tran Thanh": 46
+    },
+    "69": {
+        "label_face": "Tran Thanh",
+        "sum_face": 5,
+        "video": "/media/video/TT-4.mp4",
+        "Tran Thanh": 5
+    },
+    "70": {
+        "label_face": "Tran Thanh",
+        "sum_face": 39,
+        "video": "/media/video/TT-5.mp4",
+        "Tran Thanh": 39
+    },
+    "71": {
+        "label_face": "Tran Thanh",
+        "sum_face": 6,
+        "video": "/media/video/TT-6.mp4",
+        "Tran Thanh": 6
+    },
+    "72": {
+        "label_face": "Tran Thanh",
+        "sum_face": 3,
+        "video": "/media/video/TT-7.mp4",
+        "Tran Thanh": 3
+    },
+    "73": {
+        "label_face": "Tran Thanh",
+        "sum_face": 26,
+        "video": "/media/video/TT-8.mp4",
+        "Tran Thanh": 26
+    },
+    "74": {
+        "label_face": "Tran Thanh",
+        "sum_face": 47,
+        "video": "/media/video/TT-9.mp4",
+        "Tran Thanh": 47
+    },
+    "75": {
+        "label_face": "Tran Thanh",
+        "sum_face": 31,
+        "video": "/media/video/TT-10.mp4",
+        "Tran Thanh": 31
+    },
+    "76": {
+        "label_face": "Trinh Kim Chi",
+        "sum_face": 16,
+        "video": "/media/video/TKC-1.mp4",
+        "Trinh Kim Chi": 16
+    },
+    "77": {
+        "label_face": "Trinh Kim Chi",
+        "sum_face": 23,
+        "video": "/media/video/TKC-2.mp4",
+        "Trinh Kim Chi": 23
+    },
+    "78": {
+        "label_face": "Trinh Kim Chi",
+        "sum_face": 19,
+        "video": "/media/video/TKC-3.mp4",
+        "Trinh Kim Chi": 19
+    },
+    "79": {
+        "label_face": "Trinh Kim Chi",
+        "sum_face": 3,
+        "video": "/media/video/TKC-4.mp4",
+        "Trinh Kim Chi": 3
+    },
+    "80": {
+        "label_face": "Trinh Kim Chi",
+        "sum_face": 20,
+        "video": "/media/video/TKC-5.mp4",
+        "Trinh Kim Chi": 20
+    },
+    "81": {
+        "label_face": "Trinh Kim Chi",
+        "sum_face": 1,
+        "video": "/media/video/TKC-6.mp4",
+        "Trinh Kim Chi": 1
+    },
+    "82": {
+        "label_face": "Trinh Kim Chi",
+        "sum_face": 20,
+        "video": "/media/video/TKC-7.mp4",
+        "Trinh Kim Chi": 20
+    },
+    "83": {
+        "label_face": "Trinh Kim Chi",
+        "sum_face": 21,
+        "video": "/media/video/TKC-8.mp4",
+        "Trinh Kim Chi": 21
+    },
+    "84": {
+        "label_face": "Trinh Kim Chi",
+        "sum_face": 11,
+        "video": "/media/video/TKC-9.mp4",
+        "Trinh Kim Chi": 11
+    },
+    "85": {
+        "label_face": "Trinh Kim Chi",
+        "sum_face": 20,
+        "video": "/media/video/TKC-10.mp4",
+        "Trinh Kim Chi": 20
+    },
+    "86": {
+        "label_face": "Ly Hai",
+        "sum_face": 33,
+        "video": "/media/video/LH-10.mp4",
+        "Ly Hai": 33
+    },
+    "87": {
+        "label_face": "Ly Hai",
+        "sum_face": 10,
+        "video": "/media/video/LH-9.mp4",
+        "Ly Hai": 10
+    },
+    "88": {
+        "label_face": "Ly Hai",
+        "sum_face": 2,
+        "video": "/media/video/LH-8.mp4",
+        "Ly Hai": 2
+    },
+    "89": {
+        "label_face": "Ly Hai",
+        "sum_face": 11,
+        "video": "/media/video/LH-7.mp4",
+        "Ly Hai": 11
+    },
+    "90": {
+        "label_face": "Ly Hai",
+        "sum_face": 16,
+        "video": "/media/video/LH-6.mp4",
+        "Ly Hai": 16
+    },
+    "91": {
+        "label_face": "Ly Hai",
+        "sum_face": 4,
+        "video": "/media/video/LH-5.mp4",
+        "Ly Hai": 4
+    },
+    "92": {
+        "label_face": "Ly Hai",
+        "sum_face": 7,
+        "video": "/media/video/LH-4.mp4",
+        "Ly Hai": 7
+    },
+    "93": {
+        "label_face": "Ly Hai",
+        "sum_face": 2,
+        "video": "/media/video/LH-3.mp4",
+        "Ly Hai": 2
+    },
+    "94": {
+        "label_face": "Ly Hai",
+        "sum_face": 30,
+        "video": "/media/video/LH-2.mp4",
+        "Ly Hai": 30
+    },
+    "95": {
+        "label_face": "Ly Hai",
+        "sum_face": 29,
+        "video": "/media/video/LH-1.mp4",
+        "Ly Hai": 29
+    },
+    "96": {
+        "label_face": "Ho Quang Hieu",
+        "sum_face": 41,
+        "video": "/media/video/HQH-1.mp4",
+        "Ho Quang Hieu": 41
+    },
+    "97": {
+        "label_face": "Ho Quang Hieu",
+        "sum_face": 27,
+        "video": "/media/video/HQH-2.mp4",
+        "Ho Quang Hieu": 27
+    },
+    "98": {
+        "label_face": "Ho Quang Hieu",
+        "sum_face": 12,
+        "video": "/media/video/HQH-3.mp4",
+        "Ho Quang Hieu": 12
+    },
+    "99": {
+        "label_face": "Ho Quang Hieu",
+        "sum_face": 7,
+        "video": "/media/video/HQH-4.mp4",
+        "Ho Quang Hieu": 7
+    },
+    "100": {
+        "label_face": "Ho Quang Hieu",
+        "sum_face": 13,
+        "video": "/media/video/HQH-5.mp4",
+        "Ho Quang Hieu": 13
+    },
+    "101": {
+        "label_face": "Ho Quang Hieu",
+        "sum_face": 6,
+        "video": "/media/video/HQH-6.mp4",
+        "Ho Quang Hieu": 6
+    },
+    "102": {
+        "label_face": "Ho Quang Hieu",
+        "sum_face": 2,
+        "video": "/media/video/HQH-7.mp4",
+        "Ho Quang Hieu": 2
+    },
+    "103": {
+        "label_face": "Ho Quang Hieu",
+        "sum_face": 11,
+        "video": "/media/video/HQH-8.mp4",
+        "Ho Quang Hieu": 11
+    },
+    "104": {
+        "label_face": "Ho Quang Hieu",
+        "sum_face": 11,
+        "video": "/media/video/HQH-9.mp4",
+        "Ho Quang Hieu": 11
+    },
+    "105": {
+        "label_face": "Ho Quang Hieu",
+        "sum_face": 24,
+        "video": "/media/video/HQH-10.mp4",
+        "Ho Quang Hieu": 24
+    },
+    "106": {
+        "label_face": "Phan Dinh Tung",
+        "sum_face": 7,
+        "video": "/media/video/PDT-10_HhWgZ4k.mp4",
+        "Phan Dinh Tung": 7
+    }
+}
